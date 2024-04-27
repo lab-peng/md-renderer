@@ -43,25 +43,11 @@ class ThreadPool(object):
         self.q = Queue(thread_num)
         for i in range(thread_num):
             Worker(self.q)
-
-    def add_task(self, f, *args, **kwargs):
-        self.q.put((f, args, kwargs))
-
-    def wait_complete(self):
-        self.q.join()
-
-if __name__ == '__main__':
-    start = time.time()
-    pool = ThreadPool(5)
-    for i in range(10):
-        pool.add_task(f, 3)
-    pool.wait_complete()
-    end = time.time() 
 \`\`\`
   `;
   
   return (
-    <div className="grid place-items-center h-screen">
+    <div className="grid place-items-center">
       {/* <MarkdownRenderer 
       children={codeString} 
       /> */}
