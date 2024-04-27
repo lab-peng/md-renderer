@@ -14,6 +14,7 @@ import MarkdownRenderer from './components/MarkdownRenderer';
 
 const App = () => {
   const codeString = `
+## Python Code Snippets
 \`\`\`python
 import threading
 import time
@@ -48,12 +49,12 @@ class ThreadPool(object):
   
   return (
     <div className="grid place-items-center">
-      {/* <MarkdownRenderer 
+      <MarkdownRenderer 
       children={codeString} 
-      /> */}
-      <SyntaxHighlighter language="python" style={materialDark}>
+      />
+      {/* <SyntaxHighlighter language="python" style={materialDark}>
         {codeString}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter> */}
     </div>
   );
 };
